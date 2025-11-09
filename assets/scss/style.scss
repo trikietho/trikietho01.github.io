@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    border-top: 1px solid rgb(206, 206, 206);
+    padding-top:5px;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.2);
+    .nav{
+        display: flex;
+        list-style: none;
+        // thẻ li
+        &-item{
+            width: 25%;
+        }
+        // thẻ a
+        &-item-text{
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: gray;
+            width: 100%;
+            align-items: center;
+            padding: 10px;
+            // thẻ i trong thẻ a (icon)
+            i {
+                font-size: 40px;
+            }
+            &.active{
+                color: rgb(24, 81, 173)
+                
+            }
+        }
+    }
+}
+.personal-info {
+    .picture{
+        position: relative;
+    }
+    img{
+        max-width: 100%;
+        object-fit: cover;
+    }
+    .backround>img{
+        height: 25vh;
+        max-height: 400px;
+        width: 100vw;
+    }
+    .avatar > img {
+        width: 120px;
+        height: 120px;
+        border-radius:  50%;
+        box-shadow: 0 0 0 3.5px white;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 10%);
+    }
+}
+
+
+
+
+.show-more {
+    position: fixed;
+    bottom: 90px;
+    right: 10px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    &.active{
+        display: block;
+    }
+    .sm-container {
+        list-style: none;
+        min-width: 150px;
+        a{
+            padding: 10px 5px;
+            display: inline-block;
+            width: 100%;
+            color: black;
+            text-decoration: none;
+            border-bottom: 1px dotted rgb(191, 191, 191);
+        }
+    }
+}
